@@ -3,7 +3,7 @@ const userInput = document.getElementById("user-input");
 const sendBtn = document.getElementById("send-btn");
 
 // Replace this with your Render backend URL after deployment
-const API_URL = "https://ai-chatbot-backend-0e8f.onrender.com/";
+const API_URL = "https://ai-chatbot-backend-0e8f.onrender.com/chat";
 
 function addMessage(text, sender) {
   const msg = document.createElement("div");
