@@ -1,0 +1,301 @@
+CHATBOT PURPOSE
+
+This chatbot provides basic IT support and guidance.
+It should answer questions using the information in this knowledge base.
+
+If the answer is not available, the chatbot should say:
+“I’m not certain based on the available information. Please contact the IT support team.”
+
+The chatbot must not invent contact details, policies, instructions, or technical information.
+
+
+IT SUPPORT CONTACT DETAILS
+
+Support email:
+frontdesk@salford.gov.uk		
+
+Support telephone:
+0161 793 3993
+
+Support hours:
+Monday to Friday, 8:00 AM to 4:30 PM.
+
+The support service is closed on weekends and UK bank holidays.
+
+For urgent incidents affecting multiple users or an important business service, contact the service desk by telephone.
+
+
+PASSWORD RESET
+
+Users who have forgotten their password should first use the organisation’s self-service password reset service.
+
+To reset a password:
+
+1. Open the self-service password reset page.
+2. Enter the work email address.
+3. Complete the required identity verification.
+4. Create a new password.
+5. Wait a few minutes before trying to sign in again.
+
+Passwords should be strong and unique.
+
+Users must not share passwords with colleagues or support staff.
+
+If self-service password reset does not work, contact the IT support team.
+
+
+MULTI-FACTOR AUTHENTICATION
+
+Multi-factor authentication, also known as MFA, adds an extra layer of security to an account.
+
+MFA may require:
+
+- approval through an authenticator application
+- a verification code
+- a telephone call
+- a text message
+- a security key
+
+Users should never approve an MFA request they did not initiate.
+
+Unexpected MFA prompts could indicate that somebody else is trying to access the account.
+
+If a user receives an unexpected MFA prompt:
+
+1. Reject the request.
+2. Change the account password.
+3. Report the incident to IT support.
+
+
+ACCOUNT LOCKOUT
+
+An account may become locked after several incorrect password attempts.
+
+Users should:
+
+1. Check that Caps Lock is not enabled.
+2. Check that the correct email address is being used.
+3. Wait a short period before trying again.
+4. Use self-service password reset if necessary.
+5. Contact IT support if the account remains locked.
+
+
+MICROSOFT TEAMS
+
+Microsoft Teams is used for messaging, meetings, calls and collaboration.
+
+If Teams is not opening correctly:
+
+1. Close Microsoft Teams completely.
+2. Reopen the application.
+3. Restart the computer if the issue continues.
+4. Check the internet connection.
+5. Sign out and sign back in.
+6. Contact IT support if the issue remains.
+
+Users should check that the correct microphone, speaker and camera are selected before joining a meeting.
+
+
+TEAMS AUDIO OR CAMERA ISSUES
+
+If a microphone, speaker or camera is not working:
+
+1. Open Teams settings.
+2. Select Devices.
+3. Confirm the correct microphone, speaker and camera are selected.
+4. Use the test call option where available.
+5. Check that the device is not muted.
+6. Check Windows privacy permissions.
+7. Restart Teams.
+
+If the device does not appear in Teams, disconnect and reconnect it before contacting IT support.
+
+
+OUTLOOK AND EMAIL
+
+If Outlook is not receiving new emails:
+
+1. Check the internet connection.
+2. Confirm Outlook is not set to Work Offline.
+3. Close and reopen Outlook.
+4. Check whether the mailbox is full.
+5. Sign in through the web version of Outlook to test the account.
+6. Restart the computer if needed.
+
+Users should report suspicious emails using the organisation’s approved phishing-reporting process.
+
+
+PHISHING AND SUSPICIOUS EMAILS
+
+Possible signs of phishing include:
+
+- unexpected requests for passwords or payment
+- urgent or threatening language
+- unusual sender addresses
+- spelling or grammar errors
+- unexpected attachments
+- links that do not match the displayed website
+- requests to approve an MFA notification
+
+Users should not open suspicious links or attachments.
+
+Suspicious messages should be reported to IT or security using the approved reporting method.
+
+If a user has already clicked a suspicious link, they should contact IT support immediately.
+
+
+INTERNET CONNECTION ISSUES
+
+If a device cannot connect to the internet:
+
+1. Check whether Wi-Fi is enabled.
+2. Confirm airplane mode is disabled.
+3. Disconnect and reconnect to Wi-Fi.
+4. Test another website.
+5. Restart the device.
+6. Restart the home router if working remotely and authorised to do so.
+7. Test a wired connection where available.
+
+If multiple users are affected, report it as a possible service outage.
+
+
+DEVICE RESTARTS
+
+Restarting a computer can resolve temporary problems by closing stuck processes and reloading system services.
+
+A restart is different from locking the device or closing the laptop lid.
+
+Users should save their work before restarting.
+
+
+SOFTWARE INSTALLATION
+
+Users should only install approved software.
+
+If software is required for work:
+
+1. Check the approved company application portal.
+2. Search for the required application.
+3. Install it through the approved process.
+4. Contact IT support if it is unavailable.
+
+Users should not download applications from unknown websites.
+
+
+SECURITY UPDATES
+
+Operating system and application updates help protect devices from known vulnerabilities.
+
+Users should:
+
+- install updates when prompted
+- restart devices when required
+- avoid repeatedly postponing important updates
+- keep approved security software enabled
+
+Updates should not be disabled without authorisation.
+
+
+REMOTE WORKING
+
+When working remotely:
+
+- use an approved work device
+- use secure Wi-Fi
+- avoid public Wi-Fi where possible
+- use the organisation’s VPN when required
+- lock the device when leaving it unattended
+- avoid discussing confidential information in public places
+- do not allow family members or other people to use the work device
+
+
+DATA PROTECTION
+
+Users should only access information required for their role.
+
+Sensitive or personal information must not be shared through unapproved systems.
+
+Users should check recipients carefully before sending emails.
+
+Confidential information should not be copied into the chatbot.
+
+The chatbot should remind users not to submit:
+
+- passwords
+- API keys
+- financial information
+- medical information
+- confidential organisational data
+- personal information about other people
+
+
+EQUIPMENT ISSUES
+
+If a keyboard, mouse, headset or other accessory is not working:
+
+1. Disconnect and reconnect the device.
+2. Try a different USB port.
+3. Check whether the device has power.
+4. Restart the computer.
+5. Test the accessory on another device if permitted.
+6. Contact IT support if it remains faulty.
+
+
+PRINTER ISSUES
+
+If a printer is not working:
+
+1. Check that the printer is powered on.
+2. Check for paper or error messages.
+3. Confirm the correct printer has been selected.
+4. Cancel stuck print jobs.
+5. Restart the printer if authorised.
+6. Restart the computer.
+7. Report the printer name, location and displayed error to IT support.
+
+
+NEW STARTER SUPPORT
+
+New starters may require:
+
+- a user account
+- a work device
+- access to approved applications
+- access to shared mailboxes
+- access to folders or systems
+- MFA registration
+- guidance on security responsibilities
+
+Requests should be submitted with enough notice before the employee’s start date.
+
+
+LEAVER PROCESS
+
+When an employee leaves:
+
+- their manager should notify the appropriate team
+- access should be removed at the correct time
+- equipment should be returned
+- shared data should be transferred where required
+- licences should be reviewed and recovered
+
+Users should not retain access after leaving the organisation.
+
+
+CHATBOT LIMITATIONS
+
+The chatbot provides general guidance only.
+
+It cannot:
+
+- reset passwords directly
+- unlock accounts
+- access user records
+- view emails
+- install software
+- make account changes
+- confirm whether a major outage is currently active
+- replace the IT service desk
+- provide emergency assistance
+
+When an action requires access to internal systems, the chatbot should direct the user to IT support.
