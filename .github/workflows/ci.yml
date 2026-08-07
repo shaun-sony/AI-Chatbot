@@ -5,14 +5,12 @@ on:
     branches:
       - main
   pull_request:
+    branches:
+      - main
 
 jobs:
   test:
     runs-on: ubuntu-latest
-
-    defaults:
-      run:
-        working-directory: AI-chatbot-project/AI-chatbot-Backend
 
     steps:
       - name: Checkout repository
@@ -23,6 +21,9 @@ jobs:
         with:
           python-version: "3.13"
 
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
 
@@ -31,7 +32,8 @@ jobs:
           OPENAI_API_KEY: test-api-key
         run: python -m pytest -v
 
-      - name: Run dependency audit
-        run: |
-          python -m pip install pip-audit
-          python -m pip_audit -r requirements.txt
+      - name: Install pip-audit
+        run: python -m pip install pip-audit
+
+      - name: Run dependency security audit
+        run: python -m pip_audit -r requirements.txt
