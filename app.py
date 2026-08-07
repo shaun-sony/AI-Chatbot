@@ -49,6 +49,11 @@ def chat():
             "reply": "Please shorten your message to 500 characters or fewer."
         }), 400
 
+    if len(user_message) > 500:
+        return jsonify({
+            "reply": "Please shorten your message to 500 characters or fewer."
+        }), 400
+
     knowledge_base = load_knowledge_base()
 
     system_prompt = f"""
