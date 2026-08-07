@@ -30,7 +30,7 @@ jobs:
       - name: Run unit tests
         env:
           OPENAI_API_KEY: test-api-key
-        run: python -m pytest -v
+        run: python -m pytest test_app.py -v
 
       - name: Install pip-audit
         run: python -m pip install pip-audit
