@@ -1,48 +1,202 @@
+const input = document.getElementById("user-input");
 const chatBox = document.getElementById("chat-box");
-const userInput = document.getElementById("user-input");
-const sendBtn = document.getElementById("send-btn");
+const characterCount = document.getElementById("character-count");
+const sendButton = document.getElementById("send-button");
 
-// Replace this with your Render backend URL after deployment
-const API_URL = "https://ai-chatbot-backend-0e8f.onrender.com/chat";
 
-function addMessage(text, sender) {
-  const msg = document.createElement("div");
-  msg.classList.add("message", sender);
-  msg.textContent = text;
-  chatBox.appendChild(msg);
-  chatBox.scrollTop = chatBox.scrollHeight;
+/* --------------------------------
+   Character counter
+   -------------------------------- */
+
+input.addEventListener("input", function () {
+
+    characterCount.textContent =
+        `${input.value.length} / 500 characters`;
+
+});
+
+
+/* --------------------------------
+   Press Enter to send
+   Shift + Enter = new line
+   -------------------------------- */
+
+input.addEventListener("keydown", function (event) {
+
+    if (event.key === "Enter" && !event.shiftKey) {
+
+        event.preventDefault();
+
+        sendMessage();
+
+    }
+
+});
+
+
+/* --------------------------------
+   Add message to chat window
+   -------------------------------- */
+
+function addMessage(message, sender) {
+
+    const row = document.createElement("div");
+
+    row.classList.add("message-row");
+
+
+    const bubble = document.createElement("div");
+
+    bubble.classList.add("message");
+
+
+    if (sender === "user") {
+
+        row.classList.add("user-row");
+
+        bubble.classList.add("user-message");
+
+    } else {
+
+        row.classList.add("bot-row");
+
+
+        const icon = document.createElement("div");
+
+        icon.classList.add("bot-icon");
+
+        icon.textContent = "🤖";
+
+
+        row.appendChild(icon);
+
+
+        bubble.classList.add("bot-message");
+
+    }
+
+
+    bubble.textContent = message;
+
+    row.appendChild(bubble);
+
+    chatBox.appendChild(row);
+
+
+    chatBox.scrollTop = chatBox.scrollHeight;
+
 }
+
+
+/* --------------------------------
+   Send message
+   -------------------------------- */
 
 async function sendMessage() {
-  const message = userInput.value.trim();
-  if (!message) return;
 
-  addMessage(message, "user");
-  userInput.value = "";
+    const message = input.value.trim();
 
-  addMessage("Typing...", "bot");
-  const typingMessage = chatBox.lastChild;
 
-  try {
-    const response = await fetch(API_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ message })
-    });
+    if (!message) {
 
-    const data = await response.json();
-    typingMessage.textContent = data.reply || "No response received.";
-  } catch (error) {
-    typingMessage.textContent = "Sorry, something went wrong connecting to the chatbot.";
-  }
+        addMessage(
+            "Please type a question before sending.",
+            "bot"
+        );
+
+        return;
+
+    }
+
+
+    if (message.length > 500) {
+
+        addMessage(
+            "Please shorten your message to 500 characters or fewer.",
+            "bot"
+        );
+
+        return;
+
+    }
+
+
+    addMessage(message, "user");
+
+
+    input.value = "";
+
+    characterCount.textContent = "0 / 500 characters";
+
+
+    sendButton.disabled = true;
+
+    sendButton.textContent = "Sending...";
+
+
+    try {
+
+        /*
+        IMPORTANT:
+        Replace the URL below with the SAME
+        Render /chat URL currently used in your
+        existing working script.js.
+        */
+
+        const response = await fetch(
+            "https://ai-chatbot-backend-0e8f.onrender.com/chat",
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+                    message: message
+                })
+            }
+        );
+
+
+        const data = await response.json();
+
+
+        if (!response.ok) {
+
+            addMessage(
+                data.reply ||
+                "Sorry, something went wrong.",
+                "bot"
+            );
+
+            return;
+
+        }
+
+
+        addMessage(data.reply, "bot");
+
+
+    } catch (error) {
+
+        console.error(error);
+
+
+        addMessage(
+            "Sorry, I couldn't connect to the chatbot. Please try again.",
+            "bot"
+        );
+
+    } finally {
+
+        sendButton.disabled = false;
+
+        sendButton.innerHTML =
+            '<span aria-hidden="true">➤</span> Send';
+
+        input.focus();
+
+    }
+
 }
-
-sendBtn.addEventListener("click", sendMessage);
-
-userInput.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    sendMessage();
-  }
-});
