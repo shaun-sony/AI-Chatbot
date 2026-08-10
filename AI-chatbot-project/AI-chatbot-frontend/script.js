@@ -136,12 +136,7 @@ async function sendMessage() {
 
     try {
 
-        /*
-        IMPORTANT:
-        Replace the URL below with the SAME
-        Render /chat URL currently used in your
-        existing working script.js.
-        */
+      
 
         const response = await fetch(
             "https://ai-chatbot-backend-0e8f.onrender.com/chat",
